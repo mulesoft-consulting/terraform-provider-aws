@@ -209,6 +209,7 @@ var awsPartition = partition{
 				"eu-west-1":      endpoint{},
 				"eu-west-2":      endpoint{},
 				"eu-west-3":      endpoint{},
+				"me-south-1":     endpoint{},
 				"us-east-1":      endpoint{},
 				"us-east-2":      endpoint{},
 				"us-west-1":      endpoint{},
@@ -756,6 +757,7 @@ var awsPartition = partition{
 				"eu-west-2":      endpoint{},
 				"eu-west-3":      endpoint{},
 				"me-south-1":     endpoint{},
+				"sa-east-1":      endpoint{},
 				"us-east-1":      endpoint{},
 				"us-east-2":      endpoint{},
 				"us-west-1":      endpoint{},
@@ -1229,6 +1231,12 @@ var awsPartition = partition{
 					Hostname: "rds.ap-northeast-2.amazonaws.com",
 					CredentialScope: credentialScope{
 						Region: "ap-northeast-2",
+					},
+				},
+				"ap-southeast-1": endpoint{
+					Hostname: "rds.ap-southeast-1.amazonaws.com",
+					CredentialScope: credentialScope{
+						Region: "ap-southeast-1",
 					},
 				},
 				"ap-southeast-2": endpoint{
@@ -2269,8 +2277,11 @@ var awsPartition = partition{
 				"eu-central-1":   endpoint{},
 				"eu-north-1":     endpoint{},
 				"eu-west-1":      endpoint{},
+				"eu-west-2":      endpoint{},
+				"eu-west-3":      endpoint{},
 				"sa-east-1":      endpoint{},
 				"us-east-1":      endpoint{},
+				"us-east-2":      endpoint{},
 				"us-west-2":      endpoint{},
 			},
 		},
@@ -3163,6 +3174,9 @@ var awsPartition = partition{
 				Protocols: []string{"https"},
 			},
 			Endpoints: endpoints{
+				"ap-east-1": endpoint{
+					Protocols: []string{"https"},
+				},
 				"ap-northeast-1": endpoint{
 					Protocols: []string{"https"},
 				},
@@ -4919,6 +4933,13 @@ var awsusgovPartition = partition{
 				},
 			},
 		},
+		"route53resolver": service{
+
+			Endpoints: endpoints{
+				"us-gov-east-1": endpoint{},
+				"us-gov-west-1": endpoint{},
+			},
+		},
 		"runtime.sagemaker": service{
 
 			Endpoints: endpoints{
@@ -5189,6 +5210,12 @@ var awsisoPartition = partition{
 				},
 			},
 		},
+		"api.sagemaker": service{
+
+			Endpoints: endpoints{
+				"us-iso-east-1": endpoint{},
+			},
+		},
 		"apigateway": service{
 
 			Endpoints: endpoints{
@@ -5408,6 +5435,12 @@ var awsisoPartition = partition{
 						Region: "us-iso-east-1",
 					},
 				},
+			},
+		},
+		"runtime.sagemaker": service{
+
+			Endpoints: endpoints{
+				"us-iso-east-1": endpoint{},
 			},
 		},
 		"s3": service{
